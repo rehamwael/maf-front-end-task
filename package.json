@@ -24,7 +24,8 @@
     "eslint-plugin-vue": "^6.2.2",
     "stylelint-config-recommended": "^3.0.0",
     "tailwindcss": "^1.9.6",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "workbox-webpack-plugin": "^5.1.4"
   },
   "eslintConfig": {
     "root": true,
