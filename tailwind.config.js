@@ -11,10 +11,10 @@ module.exports = {
   presets: [],
   theme: {
     screens: {
-      sm: '640px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
+      'sm': {'max':'576px'},
     },
     colors: {
       transparent: 'transparent',
@@ -33,6 +33,7 @@ module.exports = {
         700: '#4a5568',
         800: '#2d3748',
         900: '#1a202c',
+        dark: '#BDBDBD',
       },
       red: {
         100: '#fff5f5',
@@ -272,7 +273,7 @@ module.exports = {
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
     },
     fontSize: {
-      xs: '0.75rem',
+      xs: '0.7rem',
       sm: '0.875rem',
       base: '1rem',
       lg: '1.125rem',
@@ -281,7 +282,7 @@ module.exports = {
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
-      '6xl': '4.5rem',
+      '6xl': '4rem',
     },
     fontWeight: {
       hairline: '100',
@@ -300,6 +301,7 @@ module.exports = {
       full: '100%',
       screen: '100vh',
       slide: '86vh',
+      onepx: '1px',
     }),
     inset: {
       '0': '0',
