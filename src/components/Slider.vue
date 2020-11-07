@@ -78,7 +78,6 @@
         this.$refs.mySwiper.$swiper.slideNext();
       },
       getSliderImage(villa) {
-        console.log(villa)
         return villa.villa_image;
       }
     },
