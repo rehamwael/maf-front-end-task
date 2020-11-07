@@ -4,7 +4,9 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 import './assets/styles/tailwind.css';
 import './assets/styles/swiper.min.css';
 import './assets/styles/styles.css';
+import wb from "./registerServiceWorker";
 
+Vue.prototype.$workbox = wb;
 Vue.use(VueAwesomeSwiper);
 Vue.config.productionTip = false
 
