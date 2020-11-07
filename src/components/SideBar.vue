@@ -1,12 +1,12 @@
 <template>
-  <div class="flex justify-between flex-col flex-wrap">
+  <div class="content flex justify-between flex-col flex-wrap">
     <div class="cursor-pointer">
       <div class="w-6 my-4px mx-auto h-1.9 bg-black rounded-sm"></div>
       <div class="w-6 my-4px mx-auto h-1.9 bg-black rounded-sm"></div>
       <div class="w-6 my-4px mx-auto h-1.9 bg-black rounded-sm"></div>
     </div>
     <img src="../assets/images/logo.svg" alt="Creato Architects Logo">
-    <ul class="mx-auto mb-2">
+    <ul class="mx-auto mb-2 social-icons">
       <li class="my-4">
         <a href="">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
