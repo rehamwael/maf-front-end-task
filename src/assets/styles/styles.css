@@ -66,6 +66,15 @@
 .active div:last-child {
     transform:  rotate(-45deg) translateY(-4px);
 }
+.swiper-button-disabled {
+    color: #ddd;
+    cursor: none;
+}
+.swiper-button-disabled:hover::after {
+    width: 0;
+    transition: width .3s;
+}
+
 /*Responsive Mobile style*/
 @screen sm {
     .slider {

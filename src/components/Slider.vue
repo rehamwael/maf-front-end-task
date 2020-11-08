@@ -39,24 +39,25 @@
         </button>
       </div>
     </swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
 </template>
 
 <script>
   import villaJson from '../data/villa-data.json'
+  import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 
   export default {
     name: 'main-swiper',
     data() {
       return {
         villaData: villaJson,
+        components: {
+          Swiper,
+          SwiperSlide
+        },
 				fadeEffect: { crossFade: true },
 				effect: "fade",
         swiperOptions: {
-          pagination: {
-            el: '.swiper-pagination'
-          },
           watchOverflow: true,
           navigation: {
             nextEl: '.my-swiper-button-next',
