@@ -1,9 +1,9 @@
 <template>
-  <div class="content flex justify-between flex-col flex-wrap">
-    <div class="cursor-pointer">
-      <div class="w-6 my-4px mx-auto h-1.9 bg-black rounded-sm"></div>
-      <div class="w-6 my-4px mx-auto h-1.9 bg-black rounded-sm"></div>
-      <div class="w-6 my-4px mx-auto h-1.9 bg-black rounded-sm"></div>
+  <div class="content flex justify-between flex-col flex-wrap" v-bind:class="{ full: !isHidden }">
+    <div class="cursor-pointer" v-on:click="isHidden = !isHidden" v-bind:class="{ active: !isHidden }">
+      <div class="w-6 my-4px mx-auto h-1.9 bg-black rounded-sm transition-all duration-700"></div>
+      <div class="w-6 my-4px mx-auto h-1.9 bg-black rounded-sm transition-all duration-700"></div>
+      <div class="w-6 my-4px mx-auto h-1.9 bg-black rounded-sm transition-all duration-700"></div>
     </div>
     <img src="../assets/images/logo.svg" alt="Creato Architects Logo">
     <ul class="mx-auto mb-2 social-icons">
@@ -29,12 +29,25 @@
         </a>
       </li>
     </ul>
+    <div class="hidden mx-auto text-center transition-all duration-700">
+      <ul class="mt-8 menu">
+        <li class="py-6 capitalize text-xl tracking-widest opacity-0 transition-all duration-700"><a href="">Home</a></li>
+        <li class="py-6 capitalize text-xl tracking-widest opacity-0 transition-all duration-700"><a href="">About Us</a></li>
+        <li class="py-6 capitalize text-xl tracking-widest opacity-0 transition-all duration-700"><a href="">Villas</a></li>
+        <li class="py-6 capitalize text-xl tracking-widest opacity-0 transition-all duration-700"><a href="">Contact Us</a></li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SideBar'
+  name: 'SideBar',
+  data() {
+      return {
+          isHidden: true
+      };
+  }
 }
 </script>
 

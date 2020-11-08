@@ -20,21 +20,64 @@
 
 .swiper-btn:hover::after {
     width: 100%;
-    //transition: width .3s;
+    transition: width .3s;
+}
+.active div:first-child {
+    transform:  rotate(45deg) translateY(4px);
+}
+.full {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    padding: 3em 3.5em;
+    background: #ffff;
+    flex-direction: row-reverse;
+}
+.full .hidden {
+    display: block;
+}
+.full img {
+    position: absolute;
+    left: 20px;
+    top: 24px;
+}
+.full .social-icons {
+    display: none;
+}
+.full .menu li {
+    animation: fadeInRight .5s ease forwards;
+    animation-delay: .35s;
+}
+.full .menu li:nth-of-type(2) {
+    animation-delay: .4s;
+}
+.full .menu li:nth-of-type(3) {
+    animation-delay: .45s;
+}
+.full .menu li:nth-of-type(4) {
+    animation-delay: .50s;
+}
+.active div:nth-child(2) {
+    display: none;
+}
+.active div:last-child {
+    transform:  rotate(-45deg) translateY(-4px);
 }
 /*Responsive Mobile style*/
 @screen sm {
     .slider {
         order: 2;
         padding-left: 0;
-        margin-top: 46px;
     }
     div.sidebar {
         order: 1;
         height: auto;
-        padding: 1rem;
+        height: 74px;
+        padding: 0 1rem 7px;
         justify-content: unset;
-        border-bottom: 1px solid #eee;
         position: fixed;
         top: 0;
         z-index: 9999;
@@ -65,7 +108,7 @@
         top: 25px;
     }
     .sidebar img {
-        max-width: 80px;
+        max-width: 67px;
     }
     .villa-info {
         position: absolute;
@@ -74,6 +117,12 @@
         width: 100%;
         padding: 22px;
         color: #fff;
+    }
+    div.full {
+        padding: 1em 1.5em;
+    }
+    div.full img {
+        display: none;
     }
     .my-container {
         flex-direction: column;
@@ -93,5 +142,16 @@
     .detail-btn {
         padding: 20px;
         z-index: 9999;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(800px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
 }

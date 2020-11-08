@@ -21,7 +21,8 @@ export default {
   components: {
     SideBar,
     Slider
-  },created() {
+  },
+  created() {
     if (this.$workbox) {
       this.$workbox.addEventListener("waiting", () => {
         this.showUpgradeUI = true;
