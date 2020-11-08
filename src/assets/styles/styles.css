@@ -32,7 +32,7 @@
     width: 100%;
     height: 100%;
     z-index: 99;
-    padding: 3em 3.5em;
+    padding: 3em 6em;
     background: #ffff;
     flex-direction: row-reverse;
 }
@@ -117,6 +117,10 @@
         width: 100%;
         padding: 22px;
         color: #fff;
+    }
+    .h-screen.swiper-slide {
+        position: relative;
+        top: -50px;
     }
     div.full {
         padding: 1em 1.5em;

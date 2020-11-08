@@ -7,6 +7,10 @@ module.exports = {
       appleMobileWebAppCache: "yes",
       manifestOptions: {
         background_color: "#000"
+      },
+      workboxOptions: {
+        skipWaiting: true,
+        clientsClaim: true,
       }
     }
 };
