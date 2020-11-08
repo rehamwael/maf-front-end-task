@@ -11,8 +11,8 @@
           <h2 class="text-6xl leading-tight w-16 font-light">{{villa.villa_name}}</h2>
           <div class="flex flex-row-reverse">
             <div class="w-40 bg-gray-300 border-r opacity-25 h-onepx mt-2 ml-4"></div>
-            <div class="my-swiper-button-next swiper-btn inline uppercase text-xs tracking-widest cursor-pointer" slot="button-next" @click="next()">Next</div>
-            <div class="my-swiper-button-prev swiper-btn inline uppercase text-xs pr-10 tracking-widest cursor-pointer" slot="button-prev" @click="prev()">Prev.</div>
+            <div class="my-swiper-button-next swiper-btn inline uppercase outline-none text-sm tracking-widest cursor-pointer font-light" slot="button-next" @click="next()">Next</div>
+            <div class="my-swiper-button-prev swiper-btn inline uppercase outline-none text-sm pr-10 tracking-widest cursor-pointer font-light" slot="button-prev" @click="prev()">Prev.</div>
           </div>
        </div>
         <div class="text-gray-dark text-2xl opacity-25 font-light sm:hidden">
@@ -55,10 +55,17 @@
           Swiper,
           SwiperSlide
         },
-				fadeEffect: { crossFade: true },
-				effect: "fade",
         swiperOptions: {
           watchOverflow: true,
+          fadeEffect: { crossFade: true },
+          effect: "fade",
+          speed: 1000,
+          autoplay: true,
+          grabCursor: true,
+          parallax: true,
+          watchSlidesProgress: true,
+          mousewheelControl: true,
+          keyboardControl: true,
           navigation: {
             nextEl: '.my-swiper-button-next',
             prevEl: '.my-swiper-button-prev',
